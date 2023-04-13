@@ -19,3 +19,5 @@
 - Group: no permission at all
 - Other users: all the permissions.
 No commas allowed!
+
+9-John_Doe contains a script that sets the mode of the file hello (in the working directory) to '-rwxr-x-wx'
