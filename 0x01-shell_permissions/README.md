@@ -7,3 +7,5 @@
 3-new_owner contains a script that changes the owner of the file /tmp/hello to the user betty.
 
 4-empty contains a script that creates an empty file called hello.
+
+5-execute contains a script that adds execute permission to the owner of the file hello (in the working directory).
