@@ -36,3 +36,10 @@
 101-clean_emacs contains a script that deletes all files in the current working directory that end with the character ~.
 
 102-tree contains a script that creates the directories welcome/, welcome/to/ and welcome/to/school in the current directory. Only two spaces and lines allowed, not more.
+
+103-commas contians a script that lists all the files and directories of the current directory, separated by commas:
+- Directory names end with a slash /
+- Files and directories starting with a . are listed
+- The listing is alpha ordered, except for the directories . and .. which are listed at the very beginning
+- Only digits  and letters are used to sort: Digits come first
+- The listing ends with a new line
