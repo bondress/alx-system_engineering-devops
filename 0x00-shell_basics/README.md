@@ -34,3 +34,5 @@
 100-lets_move contains a script that moves all files beginning with an uppercase letter to the director /tmp/u.
 
 101-clean_emacs contains a script that deletes all files in the current working directory that end with the character ~.
+
+102-tree contains a script that creates the directories welcome/, welcome/to/ and welcome/to/school in the current directory. Only two spaces and lines allowed, not more.
