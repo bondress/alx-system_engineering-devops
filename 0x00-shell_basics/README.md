@@ -23,4 +23,12 @@
 
 10-back contains a script to change the working directory to the previous one.
 
-11-lists contains a script that lists all files(even ones with names beginning with a period character) in the current directory and the parent directory of the working directory and the /boot directory (in this order) in long format.
+11-lists contains a script that lists all files (even ones with names beginning with a period) in the current directory and the parent working directory and the /boot directory (in this order), in long format.
+
+12-file_type contains a script that prints the type of the file named 'iamafile' in the /tmp directory.
+
+13-symbolic_link contains a script that creates a symbolic link to /bin/ls in the working directory.
+
+14-copy_html contains a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
+
+100-lets_move contains a script that moves all files beginning with an uppercase letter to the director /tmp/u.
