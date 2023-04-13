@@ -35,3 +35,5 @@ No commas allowed!
 101-symbolic_link_permissions contains a script that changes the owner and the group owner of '\_hello' (a symbolic link in the working directory) to 'vincent' and 'staff' respectively.
 
 102-if_only contains a script that changes the owner of the file 'hello' (in the working directory) to 'betty' only if it is owned by the user 'guillame'.
+
+103-Star_Wars contains a script that will play the StarWars IV episode in the terminal.
