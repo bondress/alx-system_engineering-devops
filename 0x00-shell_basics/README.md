@@ -22,3 +22,5 @@
 9-firstdirdeletion contains a script to delete the my_first_directory that is in the /tmp directory
 
 10-back contains a script to change the working directory to the previous one.
+
+11-lists contains a script that lists all files(even ones with names beginning with a period character) in the current directory and the parent directory of the working directory and the /boot directory (in this order) in long format.
