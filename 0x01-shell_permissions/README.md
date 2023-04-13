@@ -20,4 +20,6 @@
 - Other users: all the permissions.
 No commas allowed!
 
-9-John_Doe contains a script that sets the mode of the file hello (in the working directory) to '-rwxr-x-wx'
+9-John_Doe contains a script that sets the mode of the file hello (in the working directory) to '-rwxr-x-wx'.
+
+10-mirror_permissions contains a script that sets the mode of the file 'hello' to the same as 'olleh's mode. Both files are in the working directory.
