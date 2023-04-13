@@ -5,3 +5,5 @@
 2-groups contains a script that prints all the groups the current user is part of.
 
 3-new_owner contains a script that changes the owner of the file /tmp/hello to the user betty.
+
+4-empty contains a script that creates an empty file called hello.
