@@ -44,3 +44,5 @@
 20-hiago contains a script that removes all letters c and C from input.
 
 21-reverse contains a script that reverses its input.
+
+22-users_and_homes contains a script that displays all users and their home directories, sorted by users. (Based on the etc/passwd file)
