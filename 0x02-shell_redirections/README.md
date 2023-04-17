@@ -2,4 +2,6 @@
 
 1-confused_smiley contains a script that displays a confused smiley "(Ôo)'.
 
-2-hellofile contains a script that displays the contents of /etc/passwd file
+2-hellofile contains a script that displays the contents of /etc/passwd file.
+
+3-twofiles contains a script that displays the contents of /etc/password and /etc/hosts
