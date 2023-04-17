@@ -1,3 +1,2 @@
 #!/bin/bash
-find . -type f -empty -printf "%f
-"
+find . -type f -empty -printf "%f"
