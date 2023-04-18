@@ -11,3 +11,5 @@
 5-local_variables contains a script that lists all local variables and environment variables, and functions.
 
 6-create_local_variable contains a script that creates a new local variable. Name: BEST Value: School
+
+7-create_global_variable contains a script that creates a new global variable. Name: BEST Value: School
