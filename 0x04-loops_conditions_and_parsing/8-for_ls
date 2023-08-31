@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script displays the content of the current directory
+# In a list format; Only the part of the name after the
+# first dash is displayed
+l=$(ls)
+for a in $l; do
+	echo "$a" | cut -d '-' -f2
+done
