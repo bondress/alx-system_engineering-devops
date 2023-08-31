@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This script displays a made-up story based on /etc/passwd
-while IFS=':' read uname pwd uid gid info home shell; do
+while IFS=':' read -r uname pwd uid gid info home shell; do
 	echo "The $uname is part of the $gid gang, "\
 	"lives in $home and rides $shell."\
 	"$uid's place is protected by the passcode $pwd,"\
