@@ -1,22 +1,30 @@
 #!/usr/bin/env bash
 # Configure Nginx so that its HTTP response contains a custom header (on web-01 and web-02)
-sudo apt-get update
-sudo apt-get -y install nginx
+apt-get update
+apt-get install -y nginx
 
-sudo ufw allow 'Nginx HTTP'
+mkdir -p /var/www/html
+touch /var/www/html/index.html
+echo "Hello World" > /var/www/html/index.html
+touch /var/www/html/404.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
 
-sudo mkdir -p /var/www/html
+printf %s "server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    add_header X-Served-By $HOSTNAME;
+    root   /var/www/html;
+    index  index.html index.htm;
 
-sudo chmod -R 755 /var/www
+    location /redirect_me {
+        return 301 https://github.com/bondress;
+    }
 
-echo 'Hello World!' |sudo tee  /var/www/html/index.html
+    error_page 404 /404.html;
+    location /404 {
+      root /var/www/html;
+      internal;
+    }
+}" > /etc/nginx/sites-available/default
 
-echo "Ceci n'est pas une page" |sudo tee /var/www/html/404.html
-
-string_for_replacement="server_name _;\n\tadd_header X-Served-By \$hostname;\n\trewrite ^\/redirect_me https:\/\/github.com\/bondress permanent;"
-sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
-
-string_for_replacement="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
-sudo sed -i "s/listen 80 default_server;/$string_for_replacement/" /etc/nginx/sites-enabled/default
-
-sudo service nginx restart
+service nginx restart
