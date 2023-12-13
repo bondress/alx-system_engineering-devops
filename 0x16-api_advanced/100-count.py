@@ -47,7 +47,7 @@ def count_words(subreddit, word_list, after="", count=[]):
                         word_list[i] = word_list[j]
                         word_list[j] = aux
 
-            for i in range(len(word_list)):
+            for n in range(len(word_list)):
                 if (count[n] > 0) and n not in save:
                     print("{}: {}".format(word_list[n].lower(), count[n]))
         else:
