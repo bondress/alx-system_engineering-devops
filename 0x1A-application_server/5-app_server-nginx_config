@@ -4,19 +4,23 @@ server {
     add_header X-Served-By 412401-web-01;
 
     # 0x1A Application Server
+    # Task 2
     server_name = 35.153.52.159
     location /airbnb-onepage/ {
         proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
     }
 
+    # Task 3
     location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$ {
         proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
     }
 
+    # Task 4
     location /api {
         proxy_pass http://127.0.0.1:5002/api;
     }
 
+    # Task 5
     location / {
         proxy_pass http://127.0.0.1:5003/2-hbnb;
     }
